@@ -1,9 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Helper to safely parse token
+const getTokenFromLocalStorage = () => {
+  const token = localStorage.getItem("token");
+  if (!token) return null;
+  try {
+    return JSON.parse(token);
+  } catch (e) {
+    return token;
+  }
+};
+
 const initialState = {
   signupData: null,
   loading: false,
-  token: localStorage.getItem("token") ? JSON.parse(localStorage.getItem("token")) : null,
+  token: getTokenFromLocalStorage(),
 };
 
 const authSlice = createSlice({

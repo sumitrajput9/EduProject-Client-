@@ -173,7 +173,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ Sumit © 2024 Course Cloud</div>
+          <div className="text-center">Made with ❤️ Sumit Rajput © Jan 2026 Course Cloud</div>
         </div>
       </div>
     </div>
